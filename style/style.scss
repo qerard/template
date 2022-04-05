@@ -15,6 +15,9 @@ body{
         display: flex;
         nav{
             border: 2px dashed $backgroundColor;
+    ul{
+        display:none;
+    }
         }
             .hamburger{
                 border: 2px dashed green;
@@ -22,8 +25,11 @@ body{
       
             @media (min-width:768px){
             nav{
+                ul{
             display:flex;
         }    
+    }
+}
         
         
         
