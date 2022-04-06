@@ -32,6 +32,7 @@ body > header div b .pageLogo a {
 }
 body > header div b .pageLogo a b {
   padding: 0.3em;
+  font-size: 2em;
 }
 body > header nav {
   position: relative;
