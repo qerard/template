@@ -22,6 +22,9 @@ body > header > * {
   display: flex;
   align-items: center;
 }
+body > header b:hover {
+  font-size: 4em;
+}
 body > header b {
   font-size: 2em;
   padding: 0.3em;
@@ -44,6 +47,8 @@ body > header nav label {
   right: 0;
   top: 0;
   cursor: pointer;
+  -webkit-animation: alternate;
+          animation: alternate;
 }
 body > header nav label div {
   background-color: white;
@@ -114,4 +119,24 @@ body > header nav #toggler:checked ~ label div:nth-child(3) {
     flex-direction: row;
     position: static;
   }
+}
+
+main {
+  border: 5px solid red;
+}
+main .wrapper {
+  border: 5px solid yellow;
+  display: flex;
+}
+main .wrapper > header {
+  border: 5px solid blue;
+  flex: 1;
+}
+main .wrapper > article {
+  flex: 1;
+}
+main .wrapper > article header .container {
+  border: 5px dashed green;
+  overflow-y: scroll;
+  max-height: 45vh;
 }/*# sourceMappingURL=style.css.map */

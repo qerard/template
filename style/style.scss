@@ -21,7 +21,9 @@ body{
             display: flex;
             align-items: center;
         }
-       
+       b:hover{
+            font-size: 4em;
+        }
         b{
             font-size: 2em;
             padding: 0.3em;
@@ -32,6 +34,7 @@ body{
                 text-decoration: none;
                 
         }}
+        
         nav{
             position: relative;
             min-height: $buttonSize;
@@ -45,6 +48,7 @@ body{
                 right: 0;
                 top: 0;
                 cursor: pointer;
+                animation: alternate;
                 
                 
                 div{
@@ -97,10 +101,10 @@ body{
                     color: rgb(255, 255, 255);
                     text-decoration: none;
                     align-items: center;
+                    
                 }
             }
         }
-
             #toggler:checked{
                ~ ul { display: flex; }
                ~ label{ border-color: blue; 
@@ -135,3 +139,29 @@ body{
             
     }
 
+    main{
+        border:5px solid red;
+
+        .wrapper{
+            border: 5px solid yellow;
+            display: flex;
+        
+
+            > header{
+                border: 5px solid blue;
+                flex: 1;
+            }
+        
+            > article{
+                flex: 1;
+            
+                header{
+                    .container{
+                     border: 5px dashed green;
+                        overflow-y: scroll;
+                        max-height: 45vh;
+                    }
+                }
+            }
+        }   
+    }
