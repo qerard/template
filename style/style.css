@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url("../img/Rectangle 1.png");
+  background-image: url("../img/abc.jpg");
   background-size: cover;
   background-position: center top;
   /*cover- przykrywa cały obszar*/
@@ -13,20 +13,104 @@ body {
   color: white;
 }
 body > header {
-  border: 2px dashed red;
   display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  text-align: center;
+}
+body > header > * {
+  display: flex;
+  align-items: center;
+}
+body > header .pageLogo a {
+  color: inherit;
+  text-decoration: none;
+}
+body > header .pageLogo a b {
+  font-size: 30px;
 }
 body > header nav {
-  border: 2px dashed rgb(177, 46, 46);
+  position: relative;
+  min-height: 48px;
 }
-body > header nav ul {
+body > header nav #toggler {
   display: none;
 }
-body > header .hamburger {
-  border: 2px dashed green;
+body > header nav label {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+body > header nav label div {
+  background-color: white;
+  border-radius: 5px;
+  transition: 0.4s;
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  height: 10%;
+}
+body > header nav label div:nth-child(1) {
+  top: 17.5%;
+}
+body > header nav label div:nth-child(2) {
+  top: 45%;
+}
+body > header nav label div:nth-child(3) {
+  top: 72.5%;
+}
+body > header nav ul {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 0 0.7em;
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 48px;
+  margin: 0;
+}
+body > header nav ul li {
+  padding: 0.7em 0.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > header nav ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  align-items: center;
+}
+body > header nav #toggler:checked ~ ul {
+  display: flex;
+}
+body > header nav #toggler:checked ~ label {
+  border-color: blue;
+}
+body > header nav #toggler:checked ~ label div:nth-child(1) {
+  transform: rotate(-135deg);
+  top: 45%;
+  box-shadow: 3px 3px 10px red, yellow -3px 3px 10px, 3px -3px 10px;
+}
+body > header nav #toggler:checked ~ label div:nth-child(2) {
+  opacity: 0;
+}
+body > header nav #toggler:checked ~ label div:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 45%;
+  box-shadow: 3px 3px 10px red, yellow -3px 3px 10px, 3px -3px 10px;
 }
 @media (min-width: 768px) {
+  body > header nav label {
+    display: none;
+  }
   body > header nav ul {
     display: flex;
+    flex-direction: row;
+    position: static;
   }
 }/*# sourceMappingURL=style.css.map */
