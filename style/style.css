@@ -30,10 +30,6 @@ body > header div b .pageLogo a {
   color: inherit;
   text-decoration: none;
 }
-body > header div b .pageLogo a b {
-  padding: 0.3em;
-  font-size: 2em;
-}
 body > header nav {
   position: relative;
   min-height: 48px;
